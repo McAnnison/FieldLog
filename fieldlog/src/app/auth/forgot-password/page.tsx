@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-export default function LoginPage() {
+export default function ForgotPasswordPage() {
   return (
     <div className="glass-strong p-8 space-y-6">
       <div className="text-center space-y-2">
         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg mx-auto">
           F
         </div>
-        <h1 className="text-2xl font-bold">Welcome back</h1>
+        <h1 className="text-2xl font-bold">Reset password</h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
-          Sign in to your FieldLog account
+          Enter your email and we'll send you a reset link
         </p>
       </div>
 
@@ -25,37 +25,18 @@ export default function LoginPage() {
             className="w-full px-4 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white/50 dark:bg-zinc-800/50 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <label htmlFor="password" className="text-sm font-medium">
-              Password
-            </label>
-            <Link
-              href="/auth/forgot-password"
-              className="text-xs text-primary hover:underline"
-            >
-              Forgot password?
-            </Link>
-          </div>
-          <input
-            id="password"
-            type="password"
-            placeholder="Enter your password"
-            className="w-full px-4 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white/50 dark:bg-zinc-800/50 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
-          />
-        </div>
         <button
           type="submit"
           className="w-full py-2.5 rounded-xl bg-primary text-white font-medium text-sm hover:bg-primary-dark transition-colors"
         >
-          Sign In
+          Send Reset Link
         </button>
       </form>
 
       <p className="text-center text-sm text-zinc-500">
-        Don't have an account?{" "}
-        <Link href="/auth/register" className="text-primary hover:underline font-medium">
-          Create one
+        Remember your password?{" "}
+        <Link href="/auth/login" className="text-primary hover:underline font-medium">
+          Sign in
         </Link>
       </p>
     </div>
